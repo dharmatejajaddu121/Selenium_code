@@ -20,11 +20,12 @@ public class LoginTest {
   
 
     @BeforeClass
-    public void setUp() {
+    public void setUp() throws InterruptedException {
     	System.setProperty("webdriver.edge.silentOutput", "true");
         WebDriverManager.edgedriver().setup();
         driver = new EdgeDriver();
         driver.manage().window().maximize();
+        Thread.sleep(3000);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://lionfish-app-by3cf.ondigitalocean.app/login"); // replace with your site
         loginPage = new Loginpage(driver);
