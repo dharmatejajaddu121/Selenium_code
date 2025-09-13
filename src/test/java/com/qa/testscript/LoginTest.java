@@ -20,30 +20,32 @@ public class LoginTest {
   
 
     @BeforeClass
-    public void setUp() throws InterruptedException {
-    	System.setProperty("webdriver.edge.silentOutput", "true");
-        WebDriverManager.edgedriver().setup();
-        driver = new EdgeDriver();
+    public void setUp() {
+    	System.setProperty("webdriver.chrome.driver", "D:\\dharma\\Eclipse 2025\\chromedriver-win64\\chromedriver.exe");
+       // WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
-        Thread.sleep(3000);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+    
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         driver.get("https://lionfish-app-by3cf.ondigitalocean.app/login"); // replace with your site
         loginPage = new Loginpage(driver);
     }
 
     @Test
     public void testValidLogin() {
-        loginPage.login("dharmateja.jaddu121@gmail.com", "Dharma@2904");
+        loginPage.enterUsername("dharmateja.jaddu121@gmail.com");
+        loginPage.enterPassword("Dharma@2904");
+        loginPage.clickLogin();
         // Add assertion here to check login success (e.g., check URL or dashboard element)
         
         
         
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.urlContains("Cotchel"));
+        wait.until(ExpectedConditions.titleContains("Cotchel"));
         System.out.println(driver.getTitle());
      
       
-        assert driver.getCurrentUrl().contains("Cotchel");
+       assert driver.getTitle().contains("Cotchel");
     }
 
 //   @AfterClass

@@ -9,97 +9,10 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">3,927</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">9,947</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.qa.testscript.LoginTest</td><td><a href="#m0">setUp</a></td><td rowspan="1">1757760288253</td><td rowspan="1">3564</td></tr><tr><th colspan="4">Test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.qa.testscript.LoginTest</td><td><a href="#m1">testValidLogin</a></td><td rowspan="1">1757760291950</td><td rowspan="1">0</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.qa.testscript.LoginTest</td><td><a href="#m0">testValidLogin</a></td><td rowspan="1">1757770575382</td><td rowspan="1">1961</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">com.qa.testscript.LoginTest#setUp</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.UnknownHostException: msedgedriver.azureedge.net
-	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1421)
-	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1190)
-	at io.github.bonigarcia.wdm.WebDriverManager.fallback(WebDriverManager.java:1437)
-	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1415)
-	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1190)
-	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:427)
-	at com.qa.testscript.LoginTest.setUp(LoginTest.java:25)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-Caused by: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.UnknownHostException: msedgedriver.azureedge.net
-	at io.github.bonigarcia.wdm.WebDriverManager.getDriversFromXml(WebDriverManager.java:1588)
-	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriverUrls(EdgeDriverManager.java:115)
-	at io.github.bonigarcia.wdm.WebDriverManager.createUrlHandler(WebDriverManager.java:1442)
-	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1268)
-	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1184)
-	... 31 more
-Caused by: java.net.UnknownHostException: msedgedriver.azureedge.net
-	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:801)
-	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1509)
-	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1367)
-	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1301)
-	at org.apache.hc.client5.http.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:43)
-	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:141)
-	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:447)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
-	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
-	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
-	at io.github.bonigarcia.wdm.online.HttpClient.execute(HttpClient.java:157)
-	at io.github.bonigarcia.wdm.WebDriverManager.getDriversFromXml(WebDriverManager.java:1573)
-	... 35 more
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.qa.testscript.LoginTest#testValidLogin</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.UnknownHostException: msedgedriver.azureedge.net
-	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1421)
-	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1190)
-	at io.github.bonigarcia.wdm.WebDriverManager.fallback(WebDriverManager.java:1437)
-	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1415)
-	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1190)
-	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:427)
-	at com.qa.testscript.LoginTest.setUp(LoginTest.java:25)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-Caused by: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.UnknownHostException: msedgedriver.azureedge.net
-	at io.github.bonigarcia.wdm.WebDriverManager.getDriversFromXml(WebDriverManager.java:1588)
-	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriverUrls(EdgeDriverManager.java:115)
-	at io.github.bonigarcia.wdm.WebDriverManager.createUrlHandler(WebDriverManager.java:1442)
-	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1268)
-	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1184)
-	... 31 more
-Caused by: java.net.UnknownHostException: msedgedriver.azureedge.net
-	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:801)
-	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1509)
-	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1367)
-	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1301)
-	at org.apache.hc.client5.http.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:43)
-	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:141)
-	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:447)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
-	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
-	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
-	at io.github.bonigarcia.wdm.online.HttpClient.execute(HttpClient.java:157)
-	at io.github.bonigarcia.wdm.WebDriverManager.getDriversFromXml(WebDriverManager.java:1573)
-	... 35 more
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">com.qa.testscript.LoginTest#testValidLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
